@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobOrbit</title>
+    <link rel="stylesheet" href="manage.css">
+        <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+</head>
+<body>
+    <script src="./manage.js"></script>
+    
+    <nav>
+      <div class="logo">JOBORBIT</div>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+      <div class="hamburger" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  
+    <!-- Overlay Menu -->
+    <div class="overlay" id="overlayMenu">
+      <span class="close-btn" onclick="closeMenu()">&times;</span>
+      <a href="file:///C:/Users/banit/OneDrive/Attachments/Desktop/FEE_3-sem/check-1st-page-job.html">Home</a>
+      <a href="#">Jobs</a>
+      <a href="#">About</a>
+      <a href="#">Feedback</a>
+      <a href="#">Sign In</a>
+    </div>
+    
+    <div class="container">
+        
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>FIND THE JOB THAT FITS YOUR LIFESTYLE</h1>
+                <p>Discover product management opportunities with India's leading tech companies and startups</p>
+            </div>
+           
+<div class="search-box">
+    <input type="text" id="search-input" placeholder="Product role, company, or location">
+    <button id="search-btn">Search</button>
+</div>
+            
+        </div>
+
+<section class="companies-section">
+    <h2 class="section-title">Top Companies Hiring Now</h2>
+    <div class="companies-scroll">
+        <div class="scroll-track">
+           
+            <div class="company-item">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft India">
+    <span>Microsoft India</span>
+</div>
+<div class="company-item">
+    <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google India">
+    <span>Google India</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/31/1/flipkart-logo-png_seeklogo-318406.png" alt="Flipkart">
+    <span>Flipkart</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/35/1/zomato-logo-png_seeklogo-354338.png" alt="Zomato">
+    <span>Zomato</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/30/1/paytm-logo-png_seeklogo-305549.png" alt="Paytm">
+    <span>Paytm</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/34/1/swiggy-logo-png_seeklogo-340348.png" alt="Swiggy">
+    <span>Swiggy</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/30/1/ola-logo-png_seeklogo-306525.png" alt="OLA">
+    <span>OLA</span>
+</div> 
+<div class="company-item">
+    <img src="https://cdn-icons-png.flaticon.com/512/888/888870.png" alt="PayPal">
+    <span>PayPal</span>
+</div>
+        </div>
+    </div>
+</section>
+
+        <section class="job-listings">
+            <h2 class="section-title">Most Popular Jobs</h2>
+             <div class="no-jobs-message" id="no-jobs-message">
+        No jobs found matching your search criteria. Try different keywords.
+    </div>
+            
+
+<div class="job-card" data-job-title="Product Manager" data-company="Flipkart">
+    <div class="job-info">
+        <h3 class="job-title">Product Manager</h3>
+        <p class="job-company">Flipkart · Bengaluru · E-commerce</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹25-40 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="1"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Senior Product Manager" data-company="Google India">
+    <div class="job-info">
+        <h3 class="job-title">Senior Product Manager</h3>
+        <p class="job-company">Google India · Hyderabad · Search Products</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹35-55 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="2"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Product Owner" data-company="Zomato">
+    <div class="job-info">
+        <h3 class="job-title">Product Owner</h3>
+        <p class="job-company">Zomato · Gurgaon · Food Delivery</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹20-35 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="3"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Associate Product Manager" data-company="Paytm">
+    <div class="job-info">
+        <h3 class="job-title">Associate Product Manager</h3>
+        <p class="job-company">Paytm · Noida · Fintech Products</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹18-30 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="4"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Product Strategy Manager" data-company="Microsoft India">
+    <div class="job-info">
+        <h3 class="job-title">Product Strategy Manager</h3>
+        <p class="job-company">Microsoft India · Bengaluru · Cloud Services</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹30-45 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="5"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Technical Product Manager" data-company="Swiggy">
+    <div class="job-info">
+        <h3 class="job-title">Technical Product Manager</h3>
+        <p class="job-company">Swiggy · Bengaluru · Delivery Tech</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹28-42 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="6"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Product Lead" data-company="Ola">
+    <div class="job-info">
+        <h3 class="job-title">Product Lead</h3>
+        <p class="job-company">Ola · Bengaluru · Mobility Solutions</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹40-60 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="7"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+                 
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobConnect</h3>
+                    <p>Find your dream job with our curated listings from top companies around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#">Create Profile</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 JobConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
+
+
+
+    

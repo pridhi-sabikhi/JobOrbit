@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobOrbit</title>
+    <link rel="stylesheet" href="category_base.css">
+        <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+</head>
+<body>
+    <script src="./category_base.js"></script>
+      <!-- Navbar -->
+    <nav>
+      <div class="logo">JOBORBIT</div>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+      <div class="hamburger" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  
+    <!-- Overlay Menu -->
+    <div class="overlay" id="overlayMenu">
+      <span class="close-btn" onclick="closeMenu()">&times;</span>
+      <a href="file:///C:/Users/banit/OneDrive/Attachments/Desktop/FEE_3-sem/check-1st-page-job.html">Home</a>
+      <a href="#">Jobs</a>
+      <a href="#">About</a>
+      <a href="#">Feedback</a>
+      <a href="#">Sign In</a>
+    </div>
+    
+    <div class="container">
+        
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>FIND THE JOB THAT FITS YOUR LIFESTYLE</h1>
+                <p>Discover the best opportunities among the top companies across the geographical area.</p>
+            </div>
+           
+<div class="search-box">
+    <input type="text" id="search-input" placeholder="Job title, keywords, or company">
+    <button id="search-btn">Search</button>
+</div>
+            
+        </div>
+
+<section class="companies-section">
+    <h2 class="section-title">Top Companies Hiring Now</h2>
+    <div class="companies-scroll">
+        <div class="scroll-track">
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft">
+                <span>Microsoft</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google">
+                <span>Google</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple">
+                <span>Apple</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/28/1/amazon-logo-png_seeklogo-286206.png" alt="Amazon">
+                <span>Amazon</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/31/1/netflix-n-logo-png_seeklogo-318950.png" alt="Netflix">
+                <span>Netflix</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/42/1/meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta">
+                <span>Meta</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
+                <span>Twitter</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/32/1/tesla-logo-png_seeklogo-329764.png" alt="Tesla">
+                <span>Tesla</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="job-listings">
+            <h2 class="section-title">Most Popular Jobs</h2>
+             <div class="no-jobs-message" id="no-jobs-message">
+        No jobs found matching your search criteria. Try different keywords.
+    </div>
+           <div class="job-card" data-job-title="Frontend Developer" data-company="Microsoft">
+    <div class="job-info">
+        <h3 class="job-title">Frontend Developer</h3>
+        <p class="job-company">Microsoft · Bengaluru · Hybrid</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹18-25 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="1"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="UX Designer" data-company="Google">
+    <div class="job-info">
+        <h3 class="job-title">UX Designer</h3>
+        <p class="job-company">Google · Hyderabad · On-site</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹15-22 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="2"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Data Scientist" data-company="Amazon">
+    <div class="job-info">
+        <h3 class="job-title">Data Scientist</h3>
+        <p class="job-company">Amazon · Chennai · Remote</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹20-28 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="3"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Product Manager" data-company="Apple">
+    <div class="job-info">
+        <h3 class="job-title">Product Manager</h3>
+        <p class="job-company">Apple · Gurgaon · On-site</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹25-35 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="4"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="DevOps Engineer" data-company="Netflix">
+    <div class="job-info">
+        <h3 class="job-title">DevOps Engineer</h3>
+        <p class="job-company">Netflix · Mumbai · Hybrid</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹22-30 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="5"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Backend Developer" data-company="Meta">
+     <div class="job-info">
+        <h3 class="job-title">Backend Developer</h3>
+        <p class="job-company">Meta · Bengaluru · On-site</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹16-24 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="6"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Cloud Engineer" data-company="Tesla">
+    <div class="job-info">
+        <h3 class="job-title">Cloud Engineer</h3>
+        <p class="job-company">Tesla · Pune · Remote</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹18-26 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="7"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobConnect</h3>
+                    <p>Find your dream job with our curated listings from top companies around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#">Create Profile</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 JobConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
+
+
+
+    

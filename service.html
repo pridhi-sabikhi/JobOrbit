@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobOrbit</title>
+    <link rel="stylesheet" href="service.css">
+        <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+</head>
+<body>
+    <script src="./service.js"></script>
+      <!-- Navbar -->
+    <nav>
+      <div class="logo">JOBORBIT</div>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+      <div class="hamburger" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  
+    <!-- Overlay Menu -->
+    <div class="overlay" id="overlayMenu">
+      <span class="close-btn" onclick="closeMenu()">&times;</span>
+      <a href="file:///C:/Users/banit/OneDrive/Attachments/Desktop/FEE_3-sem/check-1st-page-job.html">Home</a>
+      <a href="#">Jobs</a>
+      <a href="#">About</a>
+      <a href="#">Feedback</a>
+      <a href="#">Sign In</a>
+    </div>
+    
+    <div class="container">
+        
+        <div class="hero-image" >
+            <div class="hero-text">
+    <h1>FIND CUSTOMER SERVICE JOBS THAT MAKE A DIFFERENCE</h1>
+    <p>Discover rewarding opportunities with companies that value exceptional customer experience.</p>
+</div>
+           
+<div class="search-box">
+    <input type="text" id="search-input" placeholder="Customer service role, company, or location">
+    <button id="search-btn">Search</button>
+</div>
+            
+        </div>
+
+
+
+<section class="companies-section">
+    <h2 class="section-title">Top Customer Service Companies Hiring Now</h2>
+    <div class="companies-scroll">
+        <div class="scroll-track">
+            <div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/28/1/amazon-logo-png_seeklogo-286206.png" alt="Amazon India">
+    <span>Amazon India</span>
+</div>
+<div class="company-item">
+    <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple India">
+    <span>Apple India</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/30/1/flipkart-logo-png_seeklogo-305543.png" alt="Flipkart">
+    <span>Flipkart</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/18/1/hdfc-bank-logo-png_seeklogo-184652.png" alt="HDFC Bank">
+    <span>HDFC Bank</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/13/1/taj-palace-hotel-logo-png_seeklogo-135401.png" alt="Taj Hotels">
+    <span>Taj Hotels</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/6/1/icici-bank-logo-png_seeklogo-69551.png" alt="ICICI Bank">
+    <span>ICICI Bank</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/16/1/airtel-logo-png_seeklogo-168291.png" alt="Airtel">
+    <span>Airtel</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/29/1/jio-logo-png_seeklogo-292768.png" alt="Reliance Jio">
+    <span>Reliance Jio</span>
+</div>
+        </div>
+    </div>
+</section>
+
+<section class="job-listings">
+    <h2 class="section-title">Most Popular Customer Service Jobs</h2>
+    <div class="no-jobs-message" id="no-jobs-message">
+        No jobs found matching your search criteria. Try different keywords.
+    </div>
+    
+   <div class="job-card" data-job-title="Customer Care Executive" data-company="Amazon India">
+    <div class="job-info">
+        <h3 class="job-title">Customer Care Executive</h3>
+        <p class="job-company">Amazon India · Hyderabad · BPO</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹3-5 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="1"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Technical Support Executive" data-company="Apple India">
+    <div class="job-info">
+        <h3 class="job-title">Technical Support Executive</h3>
+        <p class="job-company">Apple India · Bengaluru · Voice Process</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹4-6 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="2"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Customer Service Associate" data-company="Flipkart">
+    <div class="job-info">
+        <h3 class="job-title">Customer Service Associate</h3>
+        <p class="job-company">Flipkart · Mumbai · E-commerce Support</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹3.5-5.5 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="3"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Banking Service Executive" data-company="HDFC Bank">
+    <div class="job-info">
+        <h3 class="job-title">Banking Service Executive</h3>
+        <p class="job-company">HDFC Bank · Delhi · Phone Banking</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹4-7 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="4"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Guest Relations Executive" data-company="Taj Hotels">
+    <div class="job-info">
+        <h3 class="job-title">Guest Relations Executive</h3>
+        <p class="job-company">Taj Hotels · Mumbai · Hospitality</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹3.5-6 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="5"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Call Center Representative" data-company="Airtel">
+    <div class="job-info">
+        <h3 class="job-title">Call Center Representative</h3>
+        <p class="job-company">Airtel · Pune · Telecom Support</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹3-5 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="6"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+    
+ 
+</section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobConnect</h3>
+                    <p>Find your dream job with our curated listings from top companies around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#">Create Profile</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 JobConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
+
+
+
+    

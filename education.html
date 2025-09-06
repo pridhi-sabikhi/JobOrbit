@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobOrbit</title>
+    <link rel="stylesheet" href="education.css">
+        <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+</head>
+<body>
+    <script src="./education.js"></script>
+      <!-- Navbar -->
+    <nav>
+      <div class="logo">JOBORBIT</div>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+      <div class="hamburger" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  
+    <!-- Overlay Menu -->
+    <div class="overlay" id="overlayMenu">
+      <span class="close-btn" onclick="closeMenu()">&times;</span>
+      <a href="file:///C:/Users/banit/OneDrive/Attachments/Desktop/FEE_3-sem/check-1st-page-job.html">Home</a>
+      <a href="#">Jobs</a>
+      <a href="#">About</a>
+      <a href="#">Feedback</a>
+      <a href="#">Sign In</a>
+    </div>
+    
+    <div class="container">
+        
+     
+<div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1522881193457-37ae97c905bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');" >
+    <div class="hero-text">
+        <h1>FIND TEACHING JOBS THAT SHAPE FUTURES</h1>
+        <p>Discover rewarding opportunities in education with top institutions and schools.</p>
+    </div>
+   
+    <div class="search-box" >
+        <input type="text" id="search-input" placeholder="Teaching role, subject, or school">
+        <button id="search-btn">Search</button>
+    </div>
+</div>
+
+<section class="companies-section">
+    <h2 class="section-title">Top Educational Institutions Hiring Now</h2>
+    <div class="companies-scroll">
+        <div class="scroll-track">
+            
+           <div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/31/1/iit-madras-logo-png_seeklogo-310945.png" alt="IIT Madras">
+    <span>IIT Madras</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/51/1/iit-ism-dhanbad-logo-png_seeklogo-519550.png" alt="ISM Dhanbad">
+    <span>ISM Dhanbad</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/36/1/mount-royal-university-logo-png_seeklogo-367433.png" alt="Mount Royal University">
+    <span>IISc Bangalore</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/28/1/university-of-delhi-logo-png_seeklogo-289934.png" alt="Delhi University">
+    <span>Delhi University</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/48/1/indian-institute-of-technology-delhi-logo-png_seeklogo-483677.png" alt="IIT Delhi">
+    <span>IIT Delhi</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/48/1/georgia-institute-of-technology-logo-png_seeklogo-486640.png" alt="Georgia Institute of Technology">
+    <span>Georgia Institute of Technology</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/38/1/srm-institute-of-science-and-technology-logo-png_seeklogo-381994.png" alt="SRM University">
+    <span>SRM University</span>
+</div>
+<div class="company-item">
+    <img src="https://images.seeklogo.com/logo-png/39/1/amity-university-logo-png_seeklogo-396047.png" alt="Amity University">
+    <span>Amity University</span>
+</div>
+        </div>
+    </div>
+</section>
+
+        <section class="job-listings">
+    <h2 class="section-title">Most Popular Teaching Positions</h2>
+    <div class="no-jobs-message" id="no-jobs-message">
+        No teaching positions found matching your search criteria. Try different keywords.
+    </div>
+    
+    <div class="job-card" data-job-title="Mathematics Professor" data-company="IIT Delhi">
+    <div class="job-info">
+        <h3 class="job-title">Mathematics Professor</h3>
+        <p class="job-company">IIT Delhi · New Delhi · Department of Mathematics</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹15-22 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="1"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Computer Science Professor" data-company="IIT Bombay">
+    <div class="job-info">
+        <h3 class="job-title">Computer Science Professor</h3>
+        <p class="job-company">IIT Bombay · Mumbai · CS Department</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹18-25 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="2"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Physics Faculty" data-company="IISc Bangalore">
+    <div class="job-info">
+        <h3 class="job-title">Physics Faculty</h3>
+        <p class="job-company">IISc Bangalore · Bengaluru · IoT Department</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹16-23 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="3"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="English Lecturer" data-company="Delhi University">
+    <div class="job-info">
+        <h3 class="job-title">English Lecturer</h3>
+        <p class="job-company">Delhi University · New Delhi · Literature Department</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹8-15 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="4"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Chemistry Teacher" data-company="SRM University">
+    <div class="job-info">
+        <h3 class="job-title">Chemistry Teacher</h3>
+        <p class="job-company">SRM University · Chennai · Pharmaceutical Department</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹6-12 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="5"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+
+<div class="job-card" data-job-title="Primary Teacher" data-company="Amity University">
+    <div class="job-info">
+        <h3 class="job-title">Lab Assistant</h3>
+        <p class="job-company">Amity University · Noida · Research Department</p>
+        <span class="job-type">Full-time</span>
+    </div>
+    <div class="job-salary">₹4-8 LPA</div>
+    <div class="apply-section">
+        <button class="apply-btn">Apply Now</button>
+        <button class="save-btn" data-job-id="6"><i class="far fa-bookmark"></i> Save</button>
+    </div>
+</div>
+       
+</section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobConnect</h3>
+                    <p>Find your dream job with our curated listings from top companies around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#">Create Profile</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 JobConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
+
+
+
+    
