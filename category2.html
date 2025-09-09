@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobOrbit</title>
+  <link rel="stylesheet" href="basecode.css">
+  <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">JOBORBIT</div>
+    <ul>
+      <li><a href="#jobs" id="jobsLink">Jobs</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">Sign In</a></li>
+    </ul>
+   
+    <div class="hamburger" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div class="overlay" id="overlayMenu">
+    <span class="close-btn" onclick="closeMenu()">&times;</span>
+    <a href="#">Home</a>
+    <a href="#">Jobs</a>
+    <a href="#">About</a>
+    <a href="#">Feedback</a>
+    <a href="#">Sign In</a>
+  </div>
+
+  <div class="container">
+    <div class="hero-image" style="
+      height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin: 20px 0;">
+      <div class="hero-text">
+        <h1>FIND SALES JOBS THAT FUEL YOUR AMBITION</h1>
+        <p>Discover high-commission sales roles with top companies across India and beyond.</p>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Sales role, industry, or company">
+        <button id="search-btn">Search</button>
+      </div>
+    </div>
+
+    <!-- Companies Section -->
+    <section class="companies-section">
+      <h2 class="section-title">Top Companies Hiring Sales Professionals</h2>
+      <div class="companies-scroll">
+        <div class="scroll-track">
+          <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft">
+                <span>Microsoft</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google">
+                <span>Google</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple">
+                <span>Apple</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/28/1/amazon-logo-png_seeklogo-286206.png" alt="Amazon">
+                <span>Amazon</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/31/1/netflix-n-logo-png_seeklogo-318950.png" alt="Netflix">
+                <span>Netflix</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/42/1/meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta">
+                <span>Meta</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
+                <span>Twitter</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/32/1/tesla-logo-png_seeklogo-329764.png" alt="Tesla">
+                <span>Tesla</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section class="job-listings">
+      <h2 class="section-title">Most Popular Sales Jobs In India</h2>
+      <div class="no-jobs-message" id="no-jobs-message">
+        No jobs found matching your search criteria. Try different keywords.
+      </div>
+
+      <!-- Job cards -->
+      <div class="job-card" data-job-title="UI Designer" data-company="Microsoft">
+        <div class="job-info">
+          <h3 class="job-title">UI Designer <span class="sales-role-tag">B2B</span></h3>
+          <p class="job-company">Microsoft · Bangalore · Hybrid</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹6 - 12 LPA
+          <div class="salary-conversion">(+ Commission & Bonuses)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="1"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Account Manager" data-company="Google">
+        <div class="job-info">
+          <h3 class="job-title">Account Manager <span class="sales-role-tag">Enterprise</span></h3>
+          <p class="job-company">Google · Hyderabad · On-site</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹10 - 20 LPA
+          <div class="salary-conversion">(+ Performance Bonus)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="2"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Business Development Manager" data-company="Amazon">
+        <div class="job-info">
+          <h3 class="job-title">Business Development Manager <span class="sales-role-tag">Strategic</span></h3>
+          <p class="job-company">Amazon · Remote</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹12 - 25 LPA
+          <div class="salary-conversion">(+ Commission)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="3"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="SAles Representative" data-company="Apple">
+        <div class="job-info">
+          <h3 class="job-title">Sales Representative <span class="sales-role-tag">Retail</span></h3>
+          <p class="job-company">Apple · Mumbai</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹4 - 8 LPA
+          <div class="salary-conversion">(+ Incentives)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="4"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Enterprise Sales Manager" data-company="Oracle">
+        <div class="job-info">
+          <h3 class="job-title">Enterprise Sales Manager <span class="sales-role-tag">B2B</span></h3>
+          <p class="job-company">Oracle · Delhi · Hybrid</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹15 - 30 LPA
+          <div class="salary-conversion">(+ Commission)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="5"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Inside Sales Representative" data-company="IBM">
+        <div class="job-info">
+          <h3 class="job-title">Inside Sales Representative <span class="sales-role-tag">Remote</span></h3>
+          <p class="job-company">IBM · Remote</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹5 - 10 LPA
+          <div class="salary-conversion">(+ Performance Bonus)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="6"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo & Tagline -->
+    <div class="footer-section">
+      <h2 class="footer-logo">JobOrbit</h2>
+      <p>Connecting talent with opportunity. <br>Your career starts here!</p>
+    </div>
+    
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Job Categories -->
+    <div class="footer-section">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Freelancing</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Customer Services</a></li>
+        <li><a href="#">Finance</a></li>
+      </ul>
+    </div>
+    
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    © 2025 JobOrbit. All Rights Reserved.
+  </div>
+</footer>
+
+
+  <!-- JS -->
+  <script src="basecode.js"></script>
+</body>
+</html>
