@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobOrbit</title>
+  <link rel="stylesheet" href="basecode.css">
+  <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">JOBORBIT</div>
+    <ul>
+      <li><a href="#jobs" id="jobsLink">Jobs</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">Sign In</a></li>
+    </ul>
+   
+    <div class="hamburger" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Overlay Menu -->
+  <div class="overlay" id="overlayMenu">
+    <span class="close-btn" onclick="closeMenu()">&times;</span>
+    <a href="#">Home</a>
+    <a href="#">Jobs</a>
+    <a href="#">About</a>
+    <a href="#">Feedback</a>
+    <a href="#">Sign In</a>
+  </div>
+
+  <div class="container">
+    <div class="hero-image" style="
+      height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.dribbble.com/userupload/44219606/file/original-2dd893a7e4f1e74cd37f15e899a6b912.jpeg?resize=1200x675&vertical=center');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin: 20px 0;">
+      <div class="hero-text">
+        <h1>THE BEST PLACE TO FIND YOUR DREAM JOB</h1>
+        <p>Find job you love and research the fastest-growing companies, and hire experienced workers.</p>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Job title, keywords, or company">
+        <button id="search-btn">Search</button>
+      </div>
+    </div>
+
+    <!-- Companies Section -->
+    <section class="companies-section">
+      <h2 class="section-title">Top Companies Hiring Designers</h2>
+      <div class="companies-scroll">
+        <div class="scroll-track">
+          <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Microsoft">
+                <span>Microsoft</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google">
+                <span>Google</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple">
+                <span>Apple</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/28/1/amazon-logo-png_seeklogo-286206.png" alt="Amazon">
+                <span>Amazon</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/31/1/netflix-n-logo-png_seeklogo-318950.png" alt="Netflix">
+                <span>Netflix</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/42/1/meta-icon-new-facebook-2021-logo-png_seeklogo-424014.png" alt="Meta">
+                <span>Meta</span>
+            </div>
+            <div class="company-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
+                <span>Twitter</span>
+            </div>
+            <div class="company-item">
+                <img src="https://images.seeklogo.com/logo-png/32/1/tesla-logo-png_seeklogo-329764.png" alt="Tesla">
+                <span>Tesla</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section class="job-listings">
+      <h2 class="section-title">Most Popular Design Jobs In India</h2>
+      <div class="no-jobs-message" id="no-jobs-message">
+        No jobs found matching your search criteria. Try different keywords.
+      </div>
+
+      <!-- Job cards -->
+      <div class="job-card" data-job-title="UI Designer" data-company="Microsoft">
+        <div class="job-info">
+          <h3 class="job-title">UI Designer</h3>
+          <p class="job-company">Microsoft · Bangalore · Hybrid</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹18 - 35 LPA
+          <div class="salary-conversion">(~$40,000 - $78,000 USD)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="1"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Product Designer" data-company="Google">
+        <div class="job-info">
+          <h3 class="job-title">Product Designer</h3>
+          <p class="job-company">Google · Hyderabad · On-site</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹20 - 40 LPA
+          <div class="salary-conversion">(~$45,000 - $90,000 USD)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="2"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Graphic Designer" data-company="Amazon">
+        <div class="job-info">
+          <h3 class="job-title">Graphic Designer</h3>
+          <p class="job-company">Amazon · Remote</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹8 - 15 LPA
+          <div class="salary-conversion">(~$18,000 - $34,000 USD)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="3"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="Motion Graphics Designer" data-company="Apple">
+        <div class="job-info">
+          <h3 class="job-title">Motion Graphics Designer</h3>
+          <p class="job-company">Apple · Mumbai</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹10 - 18 LPA
+          <div class="salary-conversion">(~$23,000 - $40,000 USD)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="4"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="UX Researcher" data-company="Netflix">
+        <div class="job-info">
+          <h3 class="job-title">UX Researcher</h3>
+          <p class="job-company">Netflix · Remote</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹18 - 35 LPA
+          <div class="salary-conversion">(~$40,000 - $78,000 USD)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="5"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+
+      <div class="job-card" data-job-title="UX Designer" data-company="Meta">
+        <div class="job-info">
+          <h3 class="job-title">UX Designer</h3>
+          <p class="job-company">Meta · Bangalore · Hybrid</p>
+          <span class="job-type">Full-time</span>
+        </div>
+        <div class="job-salary">₹22 - 42 LPA
+          <div class="salary-conversion">(~$49,000 - $94,000 USD)</div>
+        </div>
+        <div class="apply-section">
+          <button class="apply-btn">Apply Now</button>
+          <button class="save-btn" data-job-id="6"><i class="far fa-bookmark"></i> Save</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo & Tagline -->
+    <div class="footer-section">
+      <h2 class="footer-logo">JobOrbit</h2>
+      <p>Connecting talent with opportunity. <br>Your career starts here!</p>
+    </div>
+    
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Job Categories -->
+    <div class="footer-section">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Freelancing</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Customer Services</a></li>
+        <li><a href="#">Finance</a></li>
+      </ul>
+    </div>
+    
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    © 2025 JobOrbit. All Rights Reserved.
+  </div>
+</footer>
+  <!-- JS -->
+  <script src="basecode.js"></script>
+</body>
+</html>
