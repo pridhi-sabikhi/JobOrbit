@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
+    body{
+      display:flex;justify-content:center;align-items:center;
+      min-height:100vh;background:linear-gradient(135deg,#113e6a,ghostwhite);
+      overflow:hidden;
+    }
+    .container{
+      display:flex;width:950px;max-width:100%;background:ghostwhite;
+      border-radius:20px;box-shadow:0px 20px 60px rgba(0,0,0,0.3);
+      overflow:hidden;animation:fadeIn 1.5s ease;
+    }
+    .form-section{flex:1;padding:40px;background:ghostwhite;animation:slideInLeft 1s ease}
+    .form-section h2{color:#113e6a;margin-bottom:10px;font-size:26px;animation:fadeUp 1.2s ease}
+    .form-section p{color:#444;margin-bottom:20px;font-size:15px;animation:fadeUp 1.5s ease}
+    .form-section input{
+      width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ccc;
+      outline:none;transition:0.3s;
+    }
+    .form-section input:focus{border-color:#113e6a;box-shadow:0px 0px 8px rgba(17,62,106,0.6);transform:scale(1.02)}
+    .signin-btn{
+      width:100%;padding:12px;margin-top:10px;background:#113e6a;color:ghostwhite;
+      border:none;border-radius:10px;font-size:16px;cursor:pointer;transition:0.4s;
+    }
+    .signin-btn:hover{background:#0d2d4d;transform:translateY(-3px);box-shadow:0px 10px 20px rgba(17,62,106,0.4)}
+    .google-btn,.github-btn{
+      width:100%;padding:10px;border-radius:10px;border:1px solid #ccc;margin:8px 0;
+      background:#fff;cursor:pointer;font-weight:500;display:flex;align-items:center;justify-content:center;transition:0.4s;
+    }
+    .google-btn:hover{background:#f4f4f4;transform:translateX(5px)}
+    .github-btn:hover{background:#f4f4f4;transform:translateX(-5px)}
+    .divider{text-align:center;margin:15px 0;position:relative}
+    .divider span{background:ghostwhite;padding:0 10px;color:#777;font-size:14px;position:relative;z-index:2}
+    .divider::before{content:"";position:absolute;top:50%;left:0;height:1px;width:100%;background:#ccc;z-index:1}
+    .options{display:flex;justify-content:space-between;font-size:13px;margin:8px 0;color:#555}
+    .options a{color:#113e6a;text-decoration:none;transition:0.3s}
+    .options a:hover{text-decoration:underline}
+    .hidden{display:none}
+    .image-section{flex:1;overflow:hidden;animation:slideInRight 1s ease}
+    .image-section img{width:100%;height:100%;object-fit:cover;filter:brightness(80%);transform:scale(1.1);animation:zoomIn 15s infinite alternate ease-in-out}
+    @keyframes fadeIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideInLeft{from{transform:translateX(-100%);opacity:0}to{transform:translateX(0);opacity:1}}
+    @keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+    @keyframes zoomIn{from{transform:scale(1.05)}to{transform:scale(1.2)}}
+    .message{margin-top:10px;color:red;font-size:13px;display:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- LEFT FORM -->
+    <div class="form-section">
+      <!-- LOGIN -->
+      <div id="loginBox">
+        <h2>Welcome Back</h2>
+        <p>Enter your account details</p>
+
+        <button class="google-btn" onclick="googleLogin()">
+          <img src="https://img.icons8.com/color/16/google-logo.png"/> Log in with Google
+        </button>
+        <button class="github-btn" onclick="githubLogin()">
+          <img src="https://img.icons8.com/ios-glyphs/16/github.png"/> Log in with GitHub
+        </button>
+
+        <div class="divider"><span>OR</span></div>
+
+        <form id="loginForm">
+          <input type="text" id="loginEmail" placeholder="Email or Username" required>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <div class="options">
+            <label><input type="checkbox"> Keep me signed in</label>
+            <a href="#" id="forgotPassword">Forgot password?</a>
+          </div>
+          <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+        <div class="message" id="loginMsg"></div>
+        <p style="margin-top:10px;">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+      </div>
+
+      <!-- SIGNUP -->
+      <div id="signupBox" class="hidden">
+        <h2>Create Account</h2>
+        <p>Fill in the details below</p>
+        <form id="signupForm">
+          <input type="text" id="signupName" placeholder="Full Name" required>
+          <input type="email" id="signupEmail" placeholder="Email" required>
+          <input type="password" id="signupPassword" placeholder="Password" required>
+          <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+          <button type="submit" class="signin-btn">Sign Up</button>
+        </form>
+        <div class="message" id="signupMsg"></div>
+        <p style="margin-top:10px;">Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+      </div>
+
+      <!-- RESET -->
+      <div id="resetBox" class="hidden">
+        <h2>Reset Password</h2>
+        <p>Enter your email to receive reset instructions</p>
+        <form id="resetForm">
+          <input type="email" id="resetEmail" placeholder="Your Email" required>
+          <button type="submit" class="signin-btn">Send Reset Link</button>
+        </form>
+        <div class="message" id="resetMsg"></div>
+        <p style="margin-top:10px;"><a href="#" id="backToLogin">Back to Login</a></p>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="image-section">
+      <img src="https://www.indiafilings.com/learn/wp-content/uploads/2025/01/Elements-of-Business-Plan.jpg" alt="Background image">
+    </div>
+  </div>
+
+  <script>
+    // Switch between forms
+    const loginBox=document.getElementById("loginBox");
+    const signupBox=document.getElementById("signupBox");
+    const resetBox=document.getElementById("resetBox");
+
+    document.getElementById("showSignup").onclick=(e)=>{e.preventDefault();loginBox.classList.add("hidden");signupBox.classList.remove("hidden");};
+    document.getElementById("showLogin").onclick=(e)=>{e.preventDefault();signupBox.classList.add("hidden");loginBox.classList.remove("hidden");};
+    document.getElementById("forgotPassword").onclick=(e)=>{e.preventDefault();loginBox.classList.add("hidden");resetBox.classList.remove("hidden");};
+    document.getElementById("backToLogin").onclick=(e)=>{e.preventDefault();resetBox.classList.add("hidden");loginBox.classList.remove("hidden");};
+
+    // Login validation
+    document.getElementById("loginForm").onsubmit=(e)=>{
+      e.preventDefault();
+      const email=document.getElementById("loginEmail").value;
+      const pass=document.getElementById("loginPassword").value;
+      const msg=document.getElementById("loginMsg");
+      if(!email.includes("@")){msg.innerText="❌ Please enter a valid email.";msg.style.display="block";return;}
+      if(pass.length<4){msg.innerText="❌ Password must be at least 4 characters.";msg.style.display="block";return;}
+      msg.style.color="green";msg.innerText="✅ Login successful!";msg.style.display="block";
+    };
+
+    // Signup validation
+    document.getElementById("signupForm").onsubmit=(e)=>{
+      e.preventDefault();
+      const email=document.getElementById("signupEmail").value;
+      const pass=document.getElementById("signupPassword").value;
+      const confirm=document.getElementById("signupConfirm").value;
+      const msg=document.getElementById("signupMsg");
+      if(!email.includes("@")){msg.innerText="❌ Invalid email.";msg.style.display="block";return;}
+      if(pass.length<6){msg.innerText="❌ Password must be 6+ characters.";msg.style.display="block";return;}
+      if(pass!==confirm){msg.innerText="❌ Passwords do not match.";msg.style.display="block";return;}
+      msg.style.color="green";msg.innerText="✅ Signup successful!";msg.style.display="block";
+    };
+
+    // Reset validation
+    document.getElementById("resetForm").onsubmit=(e)=>{
+      e.preventDefault();
+      const email=document.getElementById("resetEmail").value;
+      const msg=document.getElementById("resetMsg");
+      if(!email.includes("@")){msg.innerText="❌ Please enter a valid email.";msg.style.display="block";return;}
+      msg.style.color="green";msg.innerText="📧 Reset link sent to your email!";msg.style.display="block";
+    };
+  </script>
+</body>
+</html>

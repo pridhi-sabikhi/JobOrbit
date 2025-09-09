@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.classList.remove("fas");
         icon.classList.add("far");
         this.classList.remove("saved");
-        this.innerHTML = <i class="far fa-bookmark"></i> ;
+        this.innerHTML = `<i class="far fa-bookmark"></i> Save`;
       } else {
         // Add to saved
         savedJobs.push(jobId);
         icon.classList.remove("far");
         icon.classList.add("fas");
         this.classList.add("saved");
-        this.innerHTML = <i class="fas fa-bookmark"></i> ;
+        this.innerHTML = `<i class="fas fa-bookmark"></i> Saved`;
       }
 
       localStorage.setItem("savedJobs", JSON.stringify(savedJobs));

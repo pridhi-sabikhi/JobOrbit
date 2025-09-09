@@ -8,15 +8,15 @@
         <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
 </head>
 <body>
-    <script src="./service.js"></script>
+    <script src="basecode.js"></script>
       <!-- Navbar -->
     <nav>
       <div class="logo">JOBORBIT</div>
       <ul>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Feedback</a></li>
-        <li><a href="#">Sign In</a></li>
+        <li><a href="./homepage.html">Jobs</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./feedback.html">Feedback</a></li>
+        <li><a href="./signup.html">Sign In</a></li>
       </ul>
       <div class="hamburger" onclick="openMenu()">
         <span></span>
@@ -29,15 +29,27 @@
     <div class="overlay" id="overlayMenu">
       <span class="close-btn" onclick="closeMenu()">&times;</span>
       <a href="file:///C:/Users/banit/OneDrive/Attachments/Desktop/FEE_3-sem/check-1st-page-job.html">Home</a>
-      <a href="#">Jobs</a>
-      <a href="#">About</a>
-      <a href="#">Feedback</a>
-      <a href="#">Sign In</a>
+      <a href="./homepage.html">Jobs</a>
+      <a href="./about.html">About</a>
+      <a href="./feedback.html">Feedback</a>
+      <a href="./signup.html">Sign In</a>
     </div>
     
     <div class="container">
         
-        <div class="hero-image" >
+        <div class="hero-image" style="
+            height: 500px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            margin: 20px 0;" >
             <div class="hero-text">
     <h1>FIND CUSTOMER SERVICE JOBS THAT MAKE A DIFFERENCE</h1>
     <p>Discover rewarding opportunities with companies that value exceptional customer experience.</p>
@@ -180,41 +192,57 @@
 </section>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>JobConnect</h3>
-                    <p>Find your dream job with our curated listings from top companies around the world.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Browse Jobs</a></li>
-                        <li><a href="#">Companies</a></li>
-                        <li><a href="#">Create Profile</a></li>
-                        <li><a href="#">Career Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Feedback</a></li>
-                        <li><a href="#">Partnerships</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 JobConnect. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo & Tagline -->
+    <div class="footer-section">
+      <h2 class="footer-logo">JobOrbit</h2>
+      <p>Connecting talent with opportunity. <br>Your career starts here!</p>
+    </div>
+    
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Job Categories -->
+    <div class="footer-section">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Data Science</a></li>
+        <li><a href="#">Finance</a></li>
+      </ul>
+    </div>
+    
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
 
+  
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    © 2025 JobOrbit. All Rights Reserved.
+  </div>
+</footer>
     
 </body>
 </html>
-
-
-
-    
