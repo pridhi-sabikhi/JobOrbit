@@ -6,6 +6,13 @@
       document.getElementById("overlayMenu").style.display = "none";
     }
 
+    // Auto-close overlay menu when a link is clicked
+    document.querySelectorAll("#overlayMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        closeMenu(); // call your existing closeMenu function
+      });
+    });
+
     // Slider functionality
     let slides = document.querySelectorAll(".slide");
     let currentIndex = 0;
@@ -17,13 +24,6 @@
         if (i === index) slide.classList.add("active");
       });
     }
-    // Auto-close overlay menu when a link is clicked
-document.querySelectorAll("#overlayMenu a").forEach(link => {
-  link.addEventListener("click", () => {
-    closeMenu(); // call your existing closeMenu function
-  });
-});
-
 
     function nextSlide() {
       currentIndex = (currentIndex + 1) % slides.length;

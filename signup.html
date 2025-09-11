@@ -72,49 +72,6 @@
     </div>
   </div>
 
-  <script>
-    // Switch between forms
-    const loginBox=document.getElementById("loginBox");
-    const signupBox=document.getElementById("signupBox");
-    const resetBox=document.getElementById("resetBox");
-
-    document.getElementById("showSignup").onclick=(e)=>{e.preventDefault();loginBox.classList.add("hidden");signupBox.classList.remove("hidden");};
-    document.getElementById("showLogin").onclick=(e)=>{e.preventDefault();signupBox.classList.add("hidden");loginBox.classList.remove("hidden");};
-    document.getElementById("forgotPassword").onclick=(e)=>{e.preventDefault();loginBox.classList.add("hidden");resetBox.classList.remove("hidden");};
-    document.getElementById("backToLogin").onclick=(e)=>{e.preventDefault();resetBox.classList.add("hidden");loginBox.classList.remove("hidden");};
-
-    // Login validation
-    document.getElementById("loginForm").onsubmit=(e)=>{
-      e.preventDefault();
-      const email=document.getElementById("loginEmail").value;
-      const pass=document.getElementById("loginPassword").value;
-      const msg=document.getElementById("loginMsg");
-      if(!email.includes("@")){msg.innerText="❌ Please enter a valid email.";msg.style.display="block";return;}
-      if(pass.length<4){msg.innerText="❌ Password must be at least 4 characters.";msg.style.display="block";return;}
-      msg.style.color="green";msg.innerText="✅ Login successful!";msg.style.display="block";
-    };
-
-    // Signup validation
-    document.getElementById("signupForm").onsubmit=(e)=>{
-      e.preventDefault();
-      const email=document.getElementById("signupEmail").value;
-      const pass=document.getElementById("signupPassword").value;
-      const confirm=document.getElementById("signupConfirm").value;
-      const msg=document.getElementById("signupMsg");
-      if(!email.includes("@")){msg.innerText="❌ Invalid email.";msg.style.display="block";return;}
-      if(pass.length<6){msg.innerText="❌ Password must be 6+ characters.";msg.style.display="block";return;}
-      if(pass!==confirm){msg.innerText="❌ Passwords do not match.";msg.style.display="block";return;}
-      msg.style.color="green";msg.innerText="✅ Signup successful!";msg.style.display="block";
-    };
-
-    // Reset validation
-    document.getElementById("resetForm").onsubmit=(e)=>{
-      e.preventDefault();
-      const email=document.getElementById("resetEmail").value;
-      const msg=document.getElementById("resetMsg");
-      if(!email.includes("@")){msg.innerText="❌ Please enter a valid email.";msg.style.display="block";return;}
-      msg.style.color="green";msg.innerText="📧 Reset link sent to your email!";msg.style.display="block";
-    };
-  </script>
+  <script src="signup.js"></script>
 </body>
 </html>

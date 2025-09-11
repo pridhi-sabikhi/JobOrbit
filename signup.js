@@ -37,14 +37,6 @@ document.getElementById("showLogin").addEventListener("click", function(e) {
   resetBox.classList.add("hidden");
 });
 
-// Switch: Trouble Signing In → Reset
-document.querySelector(".trouble").addEventListener("click", function(e) {
-  e.preventDefault();
-  loginBox.classList.add("hidden");
-  signupBox.classList.add("hidden");
-  resetBox.classList.remove("hidden");
-});
-
 // Switch: Reset → Login
 document.getElementById("backToLogin").addEventListener("click", function(e) {
   e.preventDefault();
