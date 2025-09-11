@@ -33,6 +33,7 @@ body {
 }
 
 .logo {
+  color: #113e6a;
   display: flex;
   align-items: center;
   gap: 8px;

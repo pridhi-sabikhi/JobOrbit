@@ -17,6 +17,13 @@
         if (i === index) slide.classList.add("active");
       });
     }
+    // Auto-close overlay menu when a link is clicked
+document.querySelectorAll("#overlayMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    closeMenu(); // call your existing closeMenu function
+  });
+});
+
 
     function nextSlide() {
       currentIndex = (currentIndex + 1) % slides.length;
@@ -69,16 +76,18 @@ observer.observe(document.querySelector('.steps-section'));
     });
 
     // Array of categories with vacancy counts
+// Categories data with page links
 const categories = [
-  { name: "Design", vacancies: 87 },
-  { name: "Sales", vacancies: 142 },
-  { name: "Marketing", vacancies: 95 },
-  { name: "Finance", vacancies: 73 },
-  { name: "Teaching and Education", vacancies: 110 },
-  { name: "Freelancing", vacancies: 64 },
-  { name: "Project Management", vacancies: 51 },
-  { name: "Customer Services", vacancies: 128 }
+  { name: "Design", vacancies: 87, page: "category1.html" },
+  { name: "Sales", vacancies: 120, page: "category2.html" },
+  { name: "Marketing", vacancies: 65, page: "category3.html" },
+  { name: "Finance", vacancies: 42, page: "category4.html" },
+  { name: "Teaching and Education", vacancies: 100, page: "education.html" },
+  { name: "Freelancing", vacancies: 78, page: "category_base.html" },
+  { name: "Project Management", vacancies: 56, page: "manage.html" },
+  { name: "Customer Services", vacancies: 33, page: "service.html" }
 ];
+
 
 // Reference to grid container
 const grid = document.getElementById("jobCategories");
@@ -103,10 +112,11 @@ const icons = {
   "Customer Services": `<i class="fa-solid fa-user"></i>`
 };
 
-// Generate category cards
+// Generate category cards with dedicated links
 categories.forEach(cat => {
-  const card = document.createElement("div");
+  const card = document.createElement("a");
   card.classList.add("card");
+  card.href = cat.page; // point to actual page
   card.innerHTML = `
     <div class="icon">${icons[cat.name]}</div>
     <h3>${cat.name}</h3>
@@ -114,6 +124,7 @@ categories.forEach(cat => {
   `;
   grid.appendChild(card);
 });
+
 
     // Observe category cards
 const cards = document.querySelectorAll('.card');
