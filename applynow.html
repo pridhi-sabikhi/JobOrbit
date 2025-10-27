@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Now | JobOrbit</title>
+  <link rel="stylesheet" href="applynow.css">
+  <link rel="icon" href="./JOBORBITlogo.jpg.png" type="image/jpg">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">JOBORBIT</div>
+    <ul>
+      <li><a href="./homepage.html">Home</a></li>
+      <li><a href="./homepage.html#jobs">Jobs</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./feedback.html">Feedback</a></li>
+      <li><a href="./signup.html">Sign In</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Apply Form Section -->
+  <section class="apply-section">
+    <div class="apply-container">
+      <h2>Apply for Your Dream Job</h2>
+      <p class="subtext">Fill out your personal details and upload your resume to apply instantly.</p>
+
+      <form class="apply-form" id="applyForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+
+        <label for="address">Residential Address</label>
+        <textarea id="address" rows="3" placeholder="Enter your full address" required></textarea>
+
+        <label for="bloodgroup">Blood Group</label>
+        <input type="text" id="bloodgroup" placeholder="Enter your blood group (e.g., B+)" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="resume">Upload Resume (PDF or DOC)</label>
+        <input type="file" id="resume" accept=".pdf, .doc, .docx" required>
+
+        <label for="message">Why should we hire you?</label>
+        <textarea id="message" rows="4" placeholder="Write a short statement"></textarea>
+
+        <button type="submit" class="apply-btn">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="footer-logo">JobOrbit</h2>
+        <p>Connecting talent with opportunity. <br>Your career starts here!</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="homepage.html#jobs">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="category_base.html">Freelancing</a></li>
+          <li><a href="category1.html">Design</a></li>
+          <li><a href="category3.html">Marketing</a></li>
+          <li><a href="service.html">Customer Services</a></li>
+          <li><a href="category4.html">Finance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 JobOrbit. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("applyForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop default submission
+
+    const confirmSubmit = confirm("Are you sure you want to submit this application form?");
+    if(confirmSubmit){
+        // Second alert after user clicks OK
+        alert("Congratulations! Your form has been submitted successfully!");
+        this.submit(); // Now submit the form
+    }
+});
+  </script>
+</body>
+</html>
